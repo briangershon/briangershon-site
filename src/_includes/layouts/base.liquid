@@ -38,8 +38,9 @@
     <meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.svg">
     <meta name="twitter:image:alt" content="{% if title %}{{ title }}{% else %}{{ site.title | default: "Brian Gershon" }}{% endif %}">
     
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title | default: "Brian Gershon" }} RSS Feed" href="/feed.xml">
+    <!-- RSS Feeds -->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | default: "Brian Gershon" }} Atom Feed" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | default: "Brian Gershon" }} RSS Feed" href="/feed.rss">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -132,6 +133,9 @@
                 </div>
                 <div class="flex space-x-6">
                     <a href="/feed.xml" class="text-gray-600 hover:text-gray-900 transition-colors text-sm">
+                        Atom Feed
+                    </a>
+                    <a href="/feed.rss" class="text-gray-600 hover:text-gray-900 transition-colors text-sm">
                         RSS Feed
                     </a>
                     {% if site.github %}
