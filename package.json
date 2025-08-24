@@ -24,6 +24,7 @@
   "devDependencies": {
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@tailwindcss/cli": "^4.1.12",
+    "@tailwindcss/typography": "^0.5.16",
     "prettier": "^3.3.3",
     "tailwindcss": "^4.1.12"
   }
