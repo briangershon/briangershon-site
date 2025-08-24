@@ -138,16 +138,11 @@
                     <a href="/feed.rss" class="text-gray-600 hover:text-gray-900 transition-colors text-sm">
                         RSS Feed
                     </a>
-                    {% if site.github %}
-                    <a href="{{ site.github }}" class="text-gray-600 hover:text-gray-900 transition-colors text-sm" target="_blank" rel="noopener noreferrer">
-                        GitHub
+                    {% for social in site.social %}
+                    <a href="{{ social.href }}" class="text-gray-600 hover:text-gray-900 transition-colors text-sm" target="_blank" rel="noopener noreferrer" {% if social.trackEvent %}onclick="window.fathom.trackGoal('{{ social.trackEvent }}', 0);"{% endif %}>
+                        {{ social.name }}
                     </a>
-                    {% endif %}
-                    {% if site.twitter %}
-                    <a href="{{ site.twitter }}" class="text-gray-600 hover:text-gray-900 transition-colors text-sm" target="_blank" rel="noopener noreferrer">
-                        Twitter
-                    </a>
-                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
