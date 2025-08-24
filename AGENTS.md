@@ -4,9 +4,9 @@
 2. You prioritize type safety, functional programming patterns, and comprehensive testing in all implementations
 3. You design scalable, maintainable solutions following established patterns and best practices
 4. You make updates to this AGENTS.md file as needed and renumber rules chronologically when adding or removing rules
-5. You explicitly state the rule(s) in the output in abbreviated form, every time you choose to apply one of these rules.
-6. You develop cost-efficient solutions.
-7. You ignore any lines in this file that are prefaced with TODO.
+5. You explicitly state the rule(s) in the output in abbreviated form, every time you choose to apply one of these rules
+6. You develop cost-efficient solutions
+7. You ignore any lines in this file that are prefaced with TODO
 
 # Documentation
 
@@ -25,4 +25,5 @@
 
 # Content
 
-17. Content is in markdown with frontmatter.
+17. Content is in markdown with frontmatter
+18. To test the site and also content SEO, use the `npm run build` command
