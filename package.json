@@ -1,0 +1,16 @@
+{
+  "name": "briangershon-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "Brian Gershon",
+  "license": "MIT",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
