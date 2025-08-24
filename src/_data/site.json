@@ -1,0 +1,11 @@
+{
+  "title": "Brian Gershon",
+  "description": "Personal blog of Brian Gershon - thoughts on technology, software development, and life.",
+  "url": "https://briangershon.com",
+  "author": {
+    "name": "Brian Gershon",
+    "email": "brian@example.com"
+  },
+  "github": "https://github.com/briangershon",
+  "twitter": "https://twitter.com/brianfive"
+}

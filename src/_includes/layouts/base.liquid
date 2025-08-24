@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} - {% endif %}{{ site.title | default: "Brian Gershon" }}</title>
+    <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description | default: "Personal blog of Brian Gershon - thoughts on technology, software development, and life." }}{% endif %}">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}{{ site.title | default: "Brian Gershon" }}">
+    <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description | default: "Personal blog of Brian Gershon - thoughts on technology, software development, and life." }}{% endif %}">
+    <meta property="og:type" content="{% if date %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{% if title %}{{ title }} - {% endif %}{{ site.title | default: "Brian Gershon" }}">
+    <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.description | default: "Personal blog of Brian Gershon - thoughts on technology, software development, and life." }}{% endif %}">
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | default: "Brian Gershon" }} RSS Feed" href="/feed.xml">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="bg-white border-b border-gray-200">
+        <nav class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
+                        {{ site.title | default: "Brian Gershon" }}
+                    </a>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-gray-900 transition-colors{% if page.url == '/' %} border-b-2 border-blue-600 text-gray-900{% endif %}">
+                        Home
+                    </a>
+                    <a href="/blog/" class="text-gray-700 hover:text-gray-900 transition-colors{% if page.url contains '/blog/' %} border-b-2 border-blue-600 text-gray-900{% endif %}">
+                        Blog
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+        {{ content }}
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-200 mt-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-600 text-sm mb-4 md:mb-0">
+                    © {{ "now" | date: "%Y" }} {{ site.title | default: "Brian Gershon" }}. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="/feed.xml" class="text-gray-600 hover:text-gray-900 transition-colors text-sm">
+                        RSS Feed
+                    </a>
+                    {% if site.github %}
+                    <a href="{{ site.github }}" class="text-gray-600 hover:text-gray-900 transition-colors text-sm" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                    {% endif %}
+                    {% if site.twitter %}
+                    <a href="{{ site.twitter }}" class="text-gray-600 hover:text-gray-900 transition-colors text-sm" target="_blank" rel="noopener noreferrer">
+                        Twitter
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

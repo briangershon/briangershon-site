@@ -1,0 +1,66 @@
+---
+layout: layouts/base.liquid
+title: Blog
+description: All blog posts by Brian Gershon - thoughts on technology, software development, and life.
+---
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <header class="mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+            Thoughts on technology, software development, and life.
+        </p>
+    </header>
+
+    {% if collections.posts.size > 0 %}
+        <div class="space-y-12">
+            {% for post in collections.posts %}
+            <article class="border-b border-gray-200 pb-12 last:border-b-0">
+                <header class="mb-4">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                        <a href="{{ post.url }}" class="hover:text-blue-600 transition-colors">
+                            {{ post.data.title }}
+                        </a>
+                    </h2>
+                    <div class="flex items-center text-gray-600 text-sm">
+                        <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+                            {{ post.date | dateDisplay }}
+                        </time>
+                        {% if post.data.tags and post.data.tags.size > 0 %}
+                            <span class="mx-3">•</span>
+                            <div class="flex flex-wrap gap-2">
+                                {% for tag in post.data.tags %}
+                                    <span class="inline-block bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </header>
+                
+                {% if post.data.description %}
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    {{ post.data.description }}
+                </p>
+                {% endif %}
+                
+                <a href="{{ post.url }}" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors font-medium">
+                    Read more
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center py-16">
+            <div class="mb-6">
+                <svg class="w-16 h-16 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">No posts yet</h2>
+            <p class="text-gray-600 text-lg">Check back soon for new content!</p>
+        </div>
+    {% endif %}
+</div>

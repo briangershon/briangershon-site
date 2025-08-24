@@ -1,16 +1,38 @@
 {
   "name": "briangershon-site",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Simple personal blog built with Eleventy, TypeScript, and Tailwind CSS v4",
+  "type": "module",
   "scripts": {
-    "dev": "npx @11ty/eleventy"
+    "build:css": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --watch",
+    "build:eleventy": "npx tsx ./node_modules/.bin/eleventy --config=eleventy.config.ts",
+    "dev": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --watch & npx tsx ./node_modules/.bin/eleventy --serve --config=eleventy.config.ts",
+    "build": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css && npm run build:eleventy",
+    "lint": "eslint src --ext .ts,.js",
+    "format": "prettier --write src/**/*.{ts,js,liquid,md}",
+    "typecheck": "tsc --noEmit"
   },
-  "keywords": [],
+  "keywords": [
+    "eleventy",
+    "blog",
+    "typescript",
+    "tailwind"
+  ],
   "author": "Brian Gershon",
   "license": "MIT",
-  "description": "",
-  "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "@tailwindcss/cli": "^4.1.12",
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "eslint": "^9.10.0",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^4.1.12",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.2"
   }
 }
