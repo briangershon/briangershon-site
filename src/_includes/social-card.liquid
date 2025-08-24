@@ -1,0 +1,13 @@
+<a
+  class="flex flex-row items-center p-6 rounded-xl border border-gray-200 bg-white hover:bg-blue-50 hover:border-blue-200 transition-all duration-200 min-h-[4rem]"
+  href="{{ social.href }}"
+  onclick="{% if site.fathom.site_id %}fathom.trackEvent('{{ social.trackEvent }}');{% endif %}return true;"
+>
+  <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+    {% if social.image %}
+    <img src="{{ social.image }}" alt="{{ social.name }}" class="w-8 h-8 object-contain flex-shrink-0" width="32" height="32" />
+    {% endif %}
+  </div>
+  <div class="flex-shrink-0 text-lg font-medium underline w-32 mr-8">{{ social.name }}</div>
+  <div class="font-light text-gray-600 flex-grow hidden sm:block">{{ social.description }}</div>
+</a>

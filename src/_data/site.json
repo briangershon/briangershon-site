@@ -10,5 +10,35 @@
   "twitter": "https://twitter.com/brianfive",
   "fathom": {
     "site_id": "UTHPVFVU"
-  }
+  },
+  "social": [
+    {
+      "name": "LinkedIn",
+      "description": "",
+      "href": "https://www.linkedin.com/in/briangershon",
+      "trackEvent": "ClickMyLinkedIn",
+      "image": "/assets/images/social/linkedin.svg"
+    },
+    {
+      "name": "GitHub",
+      "description": "My open-source projects and contributions.",
+      "href": "https://www.github.com/briangershon",
+      "trackEvent": "ClickMyGitHub",
+      "image": "/assets/images/social/github.svg"
+    },
+    {
+      "name": "Bluesky",
+      "description": "@brianfive.xyz",
+      "href": "https://bsky.app/profile/brianfive.xyz",
+      "trackEvent": "ClickMyBluesky",
+      "image": "/assets/images/social/bluesky.svg"
+    },
+    {
+      "name": "Codewars",
+      "description": "My Codewars ranking from solving various algorithms.",
+      "href": "https://www.codewars.com/users/briangershon",
+      "trackEvent": "ClickMyCodewars",
+      "image": "/assets/images/social/codewars.svg"
+    }
+  ]
 }
