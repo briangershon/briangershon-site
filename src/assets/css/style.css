@@ -26,3 +26,9 @@
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .gargoyle-header {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
