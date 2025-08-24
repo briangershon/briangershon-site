@@ -7,8 +7,9 @@
     "build:css": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --watch",
     "build:eleventy": "npx eleventy --config=eleventy.config.js",
     "dev": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --watch & npx eleventy --serve --config=eleventy.config.js",
-    "build": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css && npm run build:eleventy",
-    "format": "prettier --write src/**/*.{js,liquid,md}"
+    "build": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css && npm run build:eleventy && npm run seo:lint",
+    "format": "prettier --write src/**/*.{js,liquid,md}",
+    "seo:lint": "node scripts/seo-lint.js"
   },
   "keywords": [
     "eleventy",
@@ -25,6 +26,8 @@
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@tailwindcss/cli": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
+    "glob": "^11.0.3",
+    "jsdom": "^26.1.0",
     "prettier": "^3.3.3",
     "tailwindcss": "^4.1.12"
   }
