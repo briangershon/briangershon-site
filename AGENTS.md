@@ -10,21 +10,19 @@
 
 # Documentation
 
-8. Find Eleventy documentation using context7 MCP server.
-9. Find Liquid template documentation looking for `shopify/liquid` in context7 MCP server.
+8. Find documentation using context7 MCP server
 
 # Repository And Deployment Rules
 
-10. Use npm for package manager
-11. Use TypeScript for all code
-12. Use Eleventy with Liquid templates for all frontend code
-13. Use ESLint/Prettier for all linting and formatting
-14. Use GitHub for version control
-15. Use GitHub Actions for CI/CD
-16. Use Vercel for web deployment and API deployment
-17. Use Tailwind for CSS
-18. All tests and linting must pass before any code commit
+9. Use npm for package manager
+10. Use JavaScript for all code and not TypeScript
+11. Use Eleventy with Liquid templates for all frontend code
+12. Use Prettier for all linting and formatting
+13. Use GitHub for version control
+14. Use GitHub Actions for CI/CD
+15. Use Vercel for web deployment
+16. Use Tailwind for CSS
 
 # Content
 
-19. Content is in markdown with frontmatter.
+17. Content is in markdown with frontmatter.
