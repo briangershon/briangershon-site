@@ -1,5 +1,5 @@
 ---
-title: Building Fast Sites with Eleventy and TypeScript
+title: Building Fast Sites with Eleventy
 description: My experience building this blog with Eleventy, TypeScript, and modern web tools for optimal performance and developer experience.
 date: 2024-08-23
 tags:

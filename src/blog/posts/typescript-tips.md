@@ -1,6 +1,6 @@
 ---
 title: 5 TypeScript Tips for Better Code
-description: Essential TypeScript patterns and techniques that will improve your code quality and developer experience.
+description: 5 essential TypeScript tips including strict configuration, union types, template literals, utility types, and custom type guards for better code.
 date: 2024-08-22
 tags:
   - typescript

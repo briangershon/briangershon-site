@@ -1,6 +1,6 @@
 ---
 title: Welcome to My Blog
-description: An introduction to my new blog built with Eleventy, TypeScript, and Tailwind CSS.
+description: Learn about this site built with Eleventy, TypeScript, and Tailwind CSS. Discover technical insights, project updates, and development experiences.
 date: 2024-08-24
 tags:
   - meta
