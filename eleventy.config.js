@@ -1,8 +1,33 @@
 import rssPlugin from "@11ty/eleventy-plugin-rss";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default function (eleventyConfig) {
   // Add RSS plugin
   eleventyConfig.addPlugin(rssPlugin);
+
+  // Add Image Transform plugin for automatic image optimization
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // Modern image formats
+    formats: ["avif", "webp", "jpeg"],
+
+    // Optimal widths for header images (96px display = h-24)
+    widths: [96, 192], // 1x and 2x for retina displays
+
+    // Output settings
+    urlPath: "/assets/images/",
+    outputDir: "./_site/assets/images/",
+
+    // Performance: optimize on request during development
+    transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
+
+    // HTML attributes for performance
+    htmlOptions: {
+      imgAttributes: {
+        loading: "lazy",
+        decoding: "async",
+      },
+    },
+  });
 
   // Set directories
   eleventyConfig.setInputDirectory("src");
@@ -13,7 +38,7 @@ export default function (eleventyConfig) {
   // Set template formats
   eleventyConfig.setTemplateFormats(["html", "liquid", "md"]);
 
-  // Copy other assets but not CSS (we'll process CSS separately)
+  // Copy images for the HTML transform to process
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
 
   // Watch for changes
