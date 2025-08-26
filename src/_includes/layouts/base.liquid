@@ -112,14 +112,14 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-gray-600 text-sm mb-4 md:mb-0">
-                    © {{ "now" | date: "%Y" }} {{ site.title | default: "Brian Gershon" }}. All rights reserved.
+                    © {{ "now" | date: "%Y" }} {{ site.title | default: "Brian Gershon" }}.
                 </div>
                 <div class="flex space-x-6">
                     <a href="/feed.xml" class="text-gray-600 hover:text-gray-900 transition-colors text-sm">
-                        Atom Feed
+                        Feed (Atom)
                     </a>
                     <a href="/feed.rss" class="text-gray-600 hover:text-gray-900 transition-colors text-sm">
-                        RSS Feed
+                        Feed (RSS)
                     </a>
                     {% for social in site.social %}
                     <a href="{{ social.href }}" class="text-gray-600 hover:text-gray-900 transition-colors text-sm" target="_blank" rel="noopener noreferrer" {% if social.trackEvent %}onclick="window.fathom.trackGoal('{{ social.trackEvent }}', 0);"{% endif %}>
