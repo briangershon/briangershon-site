@@ -13,12 +13,28 @@
       </div>
 
       <!-- Stamp -->
-      <img
-        src="/assets/images/sea-serpent.png"
-        alt="Sea serpent masthead mark"
-        class="h-24 w-auto select-none"
-        width="192" height="120" loading="eager" decoding="async"
-      />
+      {% if page.url == '/' %}
+        <img
+          src="/assets/images/sea-serpent-billboard.png"
+          alt="Sea serpent masthead mark"
+          class="h-24 w-auto select-none"
+          width="192" height="120" loading="eager" decoding="async"
+        />
+      {% elsif page.url contains '/blog/' %}
+        <img
+          src="/assets/images/gargoyle.png"
+          alt="Gargoyle masthead mark"
+          class="h-24 w-auto select-none"
+          width="192" height="120" loading="eager" decoding="async"
+        />
+      {% else %}
+        <img
+          src="/assets/images/sea-serpent.png"
+          alt="Sea serpent masthead mark"
+          class="h-24 w-auto select-none"
+          width="192" height="120" loading="eager" decoding="async"
+        />
+      {% endif %}
     </div>
 
     <div class="border-b border-gray-200"></div>
