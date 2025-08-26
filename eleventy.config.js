@@ -1,5 +1,6 @@
 import rssPlugin from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import Image from "@11ty/eleventy-img";
 
 export default function (eleventyConfig) {
   // Add RSS plugin
@@ -10,8 +11,8 @@ export default function (eleventyConfig) {
     // Modern image formats
     formats: ["avif", "webp", "jpeg"],
 
-    // Optimal widths for header images (96px display = h-24)
-    widths: [96, 192], // 1x and 2x for retina displays
+    // Flexible widths: auto (original), small (headers), medium, and large
+    widths: ["auto", 96, 192, 400, 800],
 
     // Output settings
     urlPath: "/assets/images/",
@@ -27,6 +28,65 @@ export default function (eleventyConfig) {
         decoding: "async",
       },
     },
+  });
+
+  // Add specialized image shortcodes for different use cases
+  
+  // Header/Logo Images: Small, optimized for 96px display
+  eleventyConfig.addShortcode("headerImage", async function (src, alt) {
+    let html = await Image(src, {
+      widths: [96, 192],
+      formats: ["avif", "webp", "jpeg"],
+      returnType: "html",
+      htmlOptions: {
+        imgAttributes: {
+          alt,
+          sizes: "96px",
+          loading: "lazy",
+          decoding: "async",
+          "eleventy:ignore": "" // Prevent double-processing
+        }
+      }
+    });
+    return html;
+  });
+
+  // Hero Images: Large responsive images for banners/heroes
+  eleventyConfig.addShortcode("heroImage", async function (src, alt, sizes = "(max-width: 768px) 100vw, 50vw") {
+    let html = await Image(src, {
+      widths: [400, 800, 1200],
+      formats: ["avif", "webp", "jpeg"],
+      returnType: "html",
+      htmlOptions: {
+        imgAttributes: {
+          alt,
+          sizes,
+          loading: "lazy",
+          decoding: "async",
+          "eleventy:ignore": "" // Prevent double-processing
+        }
+      }
+    });
+    return html;
+  });
+
+  // Content Images: Medium sizes for blog posts and articles
+  eleventyConfig.addShortcode("contentImage", async function (src, alt, sizes = "(max-width: 600px) 100vw, 600px") {
+    let html = await Image(src, {
+      widths: [300, 600, 900],
+      formats: ["avif", "webp", "jpeg"],
+      returnType: "html",
+      htmlOptions: {
+        imgAttributes: {
+          alt,
+          sizes,
+          loading: "lazy",
+          decoding: "async",
+          "eleventy:ignore": "" // Prevent double-processing
+        }
+      }
+    });
+    return html;
   });
 
   // Set directories
