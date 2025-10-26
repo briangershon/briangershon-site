@@ -1,6 +1,3 @@
 node_modules
 _site
-
-# API-generated blog posts (fetched from api.stashfive.com)
-src/blog/posts/*.md
 .cache
