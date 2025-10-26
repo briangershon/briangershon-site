@@ -21,12 +21,19 @@ export default function (eleventyConfig) {
     // Performance: optimize on request during development
     transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
 
+    // Only process specific file extensions (skip http/https URLs)
+    // This limits transformation to local image files only
+    extensions: "html",
+
+    // Don't fail the build if remote images can't be fetched
+    sharpOptions: {
+      failOnError: false,
+    },
+
     // HTML attributes for performance
-    htmlOptions: {
-      imgAttributes: {
-        loading: "lazy",
-        decoding: "async",
-      },
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
     },
   });
 
