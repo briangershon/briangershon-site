@@ -110,10 +110,22 @@ export default function (eleventyConfig) {
   // (they're API-generated and we need Eleventy to process them)
   eleventyConfig.setUseGitIgnore(false);
 
+  // Skip building draft posts by using computed permalink
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    permalink: (data) => {
+      // Skip building draft posts by returning false for permalink
+      if (data.draft === true) {
+        return false;
+      }
+      return data.permalink;
+    }
+  });
+
   // Collections
   eleventyConfig.addCollection("posts", (collectionApi) => {
     return collectionApi
       .getFilteredByGlob("src/blog/posts/*.md")
+      .filter((post) => !post.data.draft) // Filter out draft posts
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   });
 

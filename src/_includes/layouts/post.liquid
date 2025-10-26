@@ -19,6 +19,15 @@ layout: layouts/base.liquid
         {% if description %}
         <p class="text-lg text-gray-600 mt-4 leading-relaxed">{{ description }}</p>
         {% endif %}
+
+        {% if primary_image %}
+        <figure class="mt-6">
+            <img src="{{ primary_image }}" alt="{{ title }}" class="w-full rounded-lg shadow-lg" loading="lazy">
+            {% if image_credit %}
+            <figcaption class="mt-2 text-sm text-gray-500 text-center">{{ image_credit }}</figcaption>
+            {% endif %}
+        </figure>
+        {% endif %}
     </header>
     
     <div class="prose max-w-none">

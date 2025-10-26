@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const API_BASE_URL = 'https://api.stashfive.com/api';
-const POSTS_DIR = path.join(__dirname, '..', 'src', 'blog', 'posts');
+const API_BASE_URL = "https://api.stashfive.com/api";
+const POSTS_DIR = path.join(__dirname, "..", "src", "blog", "posts");
 
 class PostFetcher {
   constructor() {
@@ -25,19 +25,19 @@ class PostFetcher {
   }
 
   async fetchAllPosts() {
-    console.log('🔍 Fetching post list from API...\n');
+    console.log("🔍 Fetching post list from API...\n");
 
     try {
       const data = await this.fetchJson(`${API_BASE_URL}/posts`);
 
       if (!data.posts || !Array.isArray(data.posts)) {
-        throw new Error('Invalid API response: missing posts array');
+        throw new Error("Invalid API response: missing posts array");
       }
 
       console.log(`Found ${data.posts.length} posts to fetch\n`);
       return data.posts;
     } catch (error) {
-      console.error('❌ Failed to fetch post list:', error.message);
+      console.error("❌ Failed to fetch post list:", error.message);
       throw error;
     }
   }
@@ -54,13 +54,13 @@ class PostFetcher {
   }
 
   parsePostContent(postData) {
-    const content = postData.content || '';
+    const content = postData.content || "";
 
     // Find the frontmatter section
     const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
 
     if (!frontmatterMatch) {
-      throw new Error('Invalid post format: missing frontmatter');
+      throw new Error("Invalid post format: missing frontmatter");
     }
 
     const frontmatterText = frontmatterMatch[1];
@@ -68,7 +68,7 @@ class PostFetcher {
 
     // Parse frontmatter to extract fields
     const frontmatter = {};
-    const lines = frontmatterText.split('\n');
+    const lines = frontmatterText.split("\n");
 
     let currentKey = null;
     let currentValue = [];
@@ -100,31 +100,33 @@ class PostFetcher {
   }
 
   parseFrontmatterValue(lines) {
-    const joined = lines.join('\n').trim();
+    const joined = lines.join("\n").trim();
 
     // Handle empty arrays
-    if (joined === '[]') {
+    if (joined === "[]") {
       return [];
     }
 
     // Handle arrays
-    if (lines.length > 1 || joined.startsWith('-')) {
+    if (lines.length > 1 || joined.startsWith("-")) {
       return lines
-        .map(line => line.trim())
-        .filter(line => line.startsWith('-'))
-        .map(line => line.substring(1).trim());
+        .map((line) => line.trim())
+        .filter((line) => line.startsWith("-"))
+        .map((line) => line.substring(1).trim());
     }
 
     // Handle booleans
-    if (joined === 'true') return true;
-    if (joined === 'false') return false;
+    if (joined === "true") return true;
+    if (joined === "false") return false;
 
     // Handle empty strings
-    if (joined === '') return '';
+    if (joined === "") return "";
 
     // Remove quotes if present
-    if ((joined.startsWith('"') && joined.endsWith('"')) ||
-        (joined.startsWith("'") && joined.endsWith("'"))) {
+    if (
+      (joined.startsWith('"') && joined.endsWith('"')) ||
+      (joined.startsWith("'") && joined.endsWith("'"))
+    ) {
       return joined.slice(1, -1);
     }
 
@@ -132,7 +134,7 @@ class PostFetcher {
   }
 
   formatFrontmatter(frontmatter) {
-    const lines = ['---'];
+    const lines = ["---"];
 
     for (const [key, value] of Object.entries(frontmatter)) {
       if (Array.isArray(value)) {
@@ -140,22 +142,41 @@ class PostFetcher {
           lines.push(`${key}: []`);
         } else {
           lines.push(`${key}:`);
-          value.forEach(item => {
+          value.forEach((item) => {
             lines.push(`  - ${item}`);
           });
         }
-      } else if (typeof value === 'boolean') {
+      } else if (typeof value === "boolean") {
         lines.push(`${key}: ${value}`);
-      } else if (value === '') {
+      } else if (value === "") {
         lines.push(`${key}:`);
-      } else if (typeof value === 'string') {
-        // Don't quote dates (YYYY-MM-DD format) or simple strings
-        if (key === 'date' && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
+      } else if (typeof value === "string") {
+        // Don't quote dates (YYYY-MM-DD format)
+        if (key === "date" && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
           lines.push(`${key}: ${value}`);
-        } else if (value.includes('"') || value.includes('\n') || value.includes(':') || value.includes('#')) {
-          // Use single quotes for strings with special characters, escape single quotes
-          const escaped = value.replace(/'/g, "''");
-          lines.push(`${key}: '${escaped}'`);
+        } else if (
+          value.includes('"') ||
+          value.includes("\n") ||
+          value.includes(":") ||
+          value.includes("#") ||
+          value.includes("<")
+        ) {
+          // Use pipe literal for multi-line strings or strings with HTML/special characters
+          // This avoids escaping issues with HTML content in image_credit
+          if (
+            value.includes("\n") ||
+            value.length > 80 ||
+            value.includes("<")
+          ) {
+            lines.push(`${key}: |`);
+            value.split("\n").forEach((line) => {
+              lines.push(`  ${line}`);
+            });
+          } else {
+            // Use single quotes for simple strings with special characters, escape single quotes
+            const escaped = value.replace(/'/g, "''");
+            lines.push(`${key}: '${escaped}'`);
+          }
         } else {
           // Simple strings without special chars
           lines.push(`${key}: ${value}`);
@@ -165,8 +186,8 @@ class PostFetcher {
       }
     }
 
-    lines.push('---');
-    return lines.join('\n');
+    lines.push("---");
+    return lines.join("\n");
   }
 
   createMarkdownFile(slug, postData) {
@@ -181,15 +202,12 @@ class PostFetcher {
 
     // Remove fields that aren't needed for Eleventy
     delete frontmatter.slug;
-    delete frontmatter.primary_image;
     delete frontmatter.summary_banner;
-    delete frontmatter.image_credit;
     delete frontmatter.hashtags;
-    delete frontmatter.draft;
 
     // Add layout field if not present
     if (!frontmatter.layout) {
-      frontmatter.layout = 'layouts/post.liquid';
+      frontmatter.layout = "layouts/post.liquid";
     }
 
     const frontmatterText = this.formatFrontmatter(frontmatter);
@@ -199,7 +217,7 @@ class PostFetcher {
   }
 
   clearPostsDirectory() {
-    console.log('🗑️  Clearing existing posts...\n');
+    console.log("🗑️  Clearing existing posts...\n");
 
     if (!fs.existsSync(POSTS_DIR)) {
       fs.mkdirSync(POSTS_DIR, { recursive: true });
@@ -207,9 +225,9 @@ class PostFetcher {
     }
 
     const files = fs.readdirSync(POSTS_DIR);
-    const mdFiles = files.filter(file => file.endsWith('.md'));
+    const mdFiles = files.filter((file) => file.endsWith(".md"));
 
-    mdFiles.forEach(file => {
+    mdFiles.forEach((file) => {
       fs.unlinkSync(path.join(POSTS_DIR, file));
     });
 
@@ -217,8 +235,8 @@ class PostFetcher {
   }
 
   async run() {
-    console.log('📝 Blog Post Fetcher');
-    console.log('===================\n');
+    console.log("📝 Blog Post Fetcher");
+    console.log("===================\n");
 
     try {
       // Clear existing posts
@@ -241,46 +259,52 @@ class PostFetcher {
           const markdown = this.createMarkdownFile(post.slug, postData);
           const filename = path.join(POSTS_DIR, `${post.slug}.md`);
 
-          fs.writeFileSync(filename, markdown, 'utf8');
+          fs.writeFileSync(filename, markdown, "utf8");
           this.fetchedCount++;
           console.log(`✅ Created: ${post.slug}.md`);
         } catch (error) {
           this.errors.push({ slug: post.slug, error: error.message });
-          console.error(`❌ Failed to create file for "${post.slug}":`, error.message);
+          console.error(
+            `❌ Failed to create file for "${post.slug}":`,
+            error.message
+          );
         }
       }
 
       this.printResults();
       return this.errors.length > 0 ? 1 : 0;
     } catch (error) {
-      console.error('\n❌ Post fetcher failed:', error.message);
+      console.error("\n❌ Post fetcher failed:", error.message);
       return 1;
     }
   }
 
   printResults() {
-    console.log('\n📊 Fetch Results');
-    console.log('================\n');
+    console.log("\n📊 Fetch Results");
+    console.log("================\n");
 
     console.log(`✅ Successfully fetched: ${this.fetchedCount} posts`);
 
     if (this.errors.length > 0) {
       console.log(`❌ Failed to fetch: ${this.errors.length} posts\n`);
-      console.log('Errors:');
+      console.log("Errors:");
       this.errors.forEach(({ slug, error }) => {
         console.log(`  - ${slug}: ${error}`);
       });
     } else {
-      console.log('✨ All posts fetched successfully!');
+      console.log("✨ All posts fetched successfully!");
     }
   }
 }
 
 // Run the fetcher
 const fetcher = new PostFetcher();
-fetcher.run().then(exitCode => {
-  process.exit(exitCode);
-}).catch(error => {
-  console.error('Fatal error:', error);
-  process.exit(1);
-});
+fetcher
+  .run()
+  .then((exitCode) => {
+    process.exit(exitCode);
+  })
+  .catch((error) => {
+    console.error("Fatal error:", error);
+    process.exit(1);
+  });
