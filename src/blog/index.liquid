@@ -16,6 +16,12 @@ description: Thoughts on technology, software development, web performance, and 
         <div class="space-y-12">
             {% for post in collections.posts %}
             <article class="border-b border-gray-200 pb-12 last:border-b-0">
+                {% if post.data.summary_banner %}
+                <a href="{{ post.url }}" class="block mb-6">
+                    <img src="{{ post.data.summary_banner }}" alt="{{ post.data.title }}" class="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow" loading="lazy">
+                </a>
+                {% endif %}
+
                 <header class="mb-4">
                     <h2 class="text-2xl font-bold text-gray-900 mb-3">
                         <a href="{{ post.url }}" class="hover:text-blue-600 transition-colors">
@@ -36,13 +42,13 @@ description: Thoughts on technology, software development, web performance, and 
                         {% endif %}
                     </div>
                 </header>
-                
-                {% if post.data.description %}
+
+                {% if post.data.summary_text %}
                 <p class="text-gray-700 leading-relaxed mb-4">
-                    {{ post.data.description }}
+                    {{ post.data.summary_text }}
                 </p>
                 {% endif %}
-                
+
                 <a href="{{ post.url }}" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors font-medium">
                     Read more
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} - {% endif %}{{ site.title | default: "Brian Gershon" }}</title>
-    <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description | default: "Personal blog of Brian Gershon - thoughts on technology, software development, and life." }}{% endif %}">
+    <meta name="description" content="{% if summary_text %}{{ summary_text }}{% else %}{{ site.description | default: "Personal blog of Brian Gershon - thoughts on technology, software development, and life." }}{% endif %}">
     <meta name="author" content="{{ site.author.name | default: "Brian Gershon" }}">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#2563eb">
@@ -14,11 +14,11 @@
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}{{ site.title | default: "Brian Gershon" }}">
-    <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description | default: "Personal blog of Brian Gershon - thoughts on technology, software development, and life." }}{% endif %}">
+    <meta property="og:description" content="{% if summary_text %}{{ summary_text }}{% else %}{{ site.description | default: "Personal blog of Brian Gershon - thoughts on technology, software development, and life." }}{% endif %}">
     <meta property="og:type" content="{% if date %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.title | default: "Brian Gershon" }}">
-    <meta property="og:image" content="{{ site.url }}/assets/images/og-image.svg">
+    <meta property="og:image" content="{% if primary_image %}{{ primary_image }}{% else %}{{ site.url }}/assets/images/og-image.svg{% endif %}">
     <meta property="og:image:alt" content="{% if title %}{{ title }}{% else %}{{ site.title | default: "Brian Gershon" }}{% endif %}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -34,8 +34,8 @@
     <meta name="twitter:site" content="@brianfive">
     <meta name="twitter:creator" content="@brianfive">
     <meta name="twitter:title" content="{% if title %}{{ title }} - {% endif %}{{ site.title | default: "Brian Gershon" }}">
-    <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.description | default: "Personal blog of Brian Gershon - thoughts on technology, software development, and life." }}{% endif %}">
-    <meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.svg">
+    <meta name="twitter:description" content="{% if summary_text %}{{ summary_text }}{% else %}{{ site.description | default: "Personal blog of Brian Gershon - thoughts on technology, software development, and life." }}{% endif %}">
+    <meta name="twitter:image" content="{% if primary_image %}{{ primary_image }}{% else %}{{ site.url }}/assets/images/og-image.svg{% endif %}">
     <meta name="twitter:image:alt" content="{% if title %}{{ title }}{% else %}{{ site.title | default: "Brian Gershon" }}{% endif %}">
     
     <!-- RSS Feed -->
@@ -54,7 +54,7 @@
         "@type": "{% if date %}BlogPosting{% else %}WebSite{% endif %}",
         {% if date %}
         "headline": "{{ title }}",
-        "description": "{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}",
+        "description": "{% if summary_text %}{{ summary_text }}{% else %}{{ site.description }}{% endif %}",
         "author": {
             "@type": "Person",
             "name": "{{ site.author.name }}",
@@ -71,7 +71,7 @@
             "@type": "WebPage",
             "@id": "{{ site.url }}{{ page.url }}"
         },
-        "image": "{{ site.url }}/assets/images/og-image.svg",
+        "image": "{% if primary_image %}{{ primary_image }}{% else %}{{ site.url }}/assets/images/og-image.svg{% endif %}",
         "url": "{{ site.url }}{{ page.url }}"
         {% else %}
         "name": "{{ site.title }}",
