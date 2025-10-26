@@ -193,18 +193,6 @@ class PostFetcher {
   createMarkdownFile(slug, postData) {
     const { frontmatter, content } = this.parsePostContent(postData);
 
-    // Map API fields to match template expectations
-    // API uses 'summary_text' but templates expect 'description'
-    if (frontmatter.summary_text && !frontmatter.description) {
-      frontmatter.description = frontmatter.summary_text;
-      delete frontmatter.summary_text;
-    }
-
-    // Remove fields that aren't needed for Eleventy
-    delete frontmatter.slug;
-    delete frontmatter.summary_banner;
-    delete frontmatter.hashtags;
-
     // Add layout field if not present
     if (!frontmatter.layout) {
       frontmatter.layout = "layouts/post.liquid";
