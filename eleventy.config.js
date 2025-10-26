@@ -104,6 +104,10 @@ export default function (eleventyConfig) {
   // Watch for changes
   eleventyConfig.addWatchTarget("src/assets/css/");
 
+  // Don't ignore blog posts even though they're in .gitignore
+  // (they're API-generated and we need Eleventy to process them)
+  eleventyConfig.setUseGitIgnore(false);
+
   // Collections
   eleventyConfig.addCollection("posts", (collectionApi) => {
     return collectionApi
