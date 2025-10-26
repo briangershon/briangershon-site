@@ -5,6 +5,11 @@ export default function (eleventyConfig) {
   // Add RSS plugin
   eleventyConfig.addPlugin(rssPlugin);
 
+  // Add RSS plugin filters for Liquid templates
+  eleventyConfig.addLiquidFilter("dateToRfc822", rssPlugin.dateToRfc822);
+  eleventyConfig.addLiquidFilter("dateToRfc3339", rssPlugin.dateToRfc3339);
+  eleventyConfig.addLiquidFilter("getNewestCollectionItemDate", rssPlugin.getNewestCollectionItemDate);
+
   // Note: eleventyImageTransformPlugin removed to prevent processing external images
   // External images in blog posts load directly from CDN without transformation
   // Local images are still optimized via shortcodes below
@@ -105,24 +110,6 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("limit", (array, count) => {
     return array.slice(0, count);
-  });
-
-  eleventyConfig.addFilter("rssDate", (date) => {
-    return new Date(date).toISOString();
-  });
-
-  eleventyConfig.addFilter("rssLastUpdatedDate", (collection) => {
-    if (!collection || collection.length === 0) {
-      return new Date().toISOString();
-    }
-
-    const latest = collection.reduce((latest, item) => {
-      const itemDate = new Date(item.date);
-      const latestDate = new Date(latest.date);
-      return itemDate > latestDate ? item : latest;
-    });
-
-    return new Date(latest.date).toISOString();
   });
 
   // Create sitemap
