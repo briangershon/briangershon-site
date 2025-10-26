@@ -10,6 +10,24 @@ export default function (eleventyConfig) {
   eleventyConfig.addLiquidFilter("dateToRfc3339", rssPlugin.dateToRfc3339);
   eleventyConfig.addLiquidFilter("getNewestCollectionItemDate", rssPlugin.getNewestCollectionItemDate);
 
+  // Custom filter to force GMT timezone for RSS dates
+  eleventyConfig.addLiquidFilter("dateToRfc822Gmt", (dateObj) => {
+    const date = new Date(dateObj);
+    // Format: "Day, DD Mon YYYY HH:MM:SS GMT"
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    const day = days[date.getUTCDay()];
+    const dayNum = String(date.getUTCDate()).padStart(2, '0');
+    const month = months[date.getUTCMonth()];
+    const year = date.getUTCFullYear();
+    const hours = String(date.getUTCHours()).padStart(2, '0');
+    const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+    const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+
+    return `${day}, ${dayNum} ${month} ${year} ${hours}:${minutes}:${seconds} GMT`;
+  });
+
   // Note: eleventyImageTransformPlugin removed to prevent processing external images
   // External images in blog posts load directly from CDN without transformation
   // Local images are still optimized via shortcodes below

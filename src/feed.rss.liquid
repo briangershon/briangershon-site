@@ -9,8 +9,8 @@ eleventyExcludeFromCollections: true
     <description>{{ site.description }}</description>
     <link>{{ site.url }}/</link>
     <atom:link href="https://www.briangershon.com/feed.rss" rel="self" type="application/rss+xml" />
-    <pubDate>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822 }}</pubDate>
-    <lastBuildDate>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
+    <pubDate>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822Gmt }}</pubDate>
+    <lastBuildDate>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822Gmt }}</lastBuildDate>
     {% for post in collections.posts | reverse %}
     {% unless post.data.draft %}
     <item>
@@ -18,7 +18,7 @@ eleventyExcludeFromCollections: true
       <description>{{ post.data.description | escape }}</description>
       <link>{{ site.url }}{{ post.url }}</link>
       <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+      <pubDate>{{ post.date | dateToRfc822Gmt }}</pubDate>
       {% if post.data.tags %}
       {% for tag in post.data.tags %}
       <category>{{ tag }}</category>
