@@ -18,7 +18,7 @@ description: Thoughts on technology, software development, web performance, and 
             <article class="border-b border-gray-200 pb-12 last:border-b-0">
                 {% if post.data.summary_banner %}
                 <a href="{{ post.url }}" class="block mb-6">
-                    <img src="{{ post.data.summary_banner }}" alt="{{ post.data.title }}" class="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow" loading="lazy">
+                    <div style="background-image: url('{{ post.data.summary_banner }}');" class="w-full h-60 bg-cover bg-center rounded-lg shadow-md hover:shadow-lg transition-shadow"></div>
                 </a>
                 {% endif %}
 
