@@ -1,41 +1,13 @@
 import rssPlugin from "@11ty/eleventy-plugin-rss";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import Image from "@11ty/eleventy-img";
 
 export default function (eleventyConfig) {
   // Add RSS plugin
   eleventyConfig.addPlugin(rssPlugin);
 
-  // Add Image Transform plugin for automatic image optimization
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    // Modern image formats
-    formats: ["avif", "webp", "jpeg"],
-
-    // Flexible widths: auto (original), small (headers), medium, and large
-    widths: ["auto", 96, 192, 400, 800],
-
-    // Output settings
-    urlPath: "/assets/images/",
-    outputDir: "./_site/assets/images/",
-
-    // Performance: optimize on request during development
-    transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
-
-    // Only process specific file extensions (skip http/https URLs)
-    // This limits transformation to local image files only
-    extensions: "html",
-
-    // Don't fail the build if remote images can't be fetched
-    sharpOptions: {
-      failOnError: false,
-    },
-
-    // HTML attributes for performance
-    defaultAttributes: {
-      loading: "lazy",
-      decoding: "async",
-    },
-  });
+  // Note: eleventyImageTransformPlugin removed to prevent processing external images
+  // External images in blog posts load directly from CDN without transformation
+  // Local images are still optimized via shortcodes below
 
   // Add specialized image shortcodes for different use cases
   
