@@ -34,6 +34,11 @@ primary_image: /assets/images/briangershon-og.png
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {% for post in recent_posts %}
             <article class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                {% if post.data.summary_banner %}
+                <a href="{{ post.url }}" class="block mb-4">
+                    <div style="background-image: url('{{ post.data.summary_banner }}');" class="w-full h-20 bg-cover bg-center rounded-lg shadow-md hover:shadow-lg transition-shadow"></div>
+                </a>
+                {% endif %}
                 <header class="mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">
                         <a href="{{ post.url }}" class="hover:text-blue-600 transition-colors">
