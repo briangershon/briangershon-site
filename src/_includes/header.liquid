@@ -14,26 +14,11 @@
 
       <!-- Stamp -->
       {% if page.url == '/' %}
-        <img
-          src="/assets/images/sea-serpent-billboard.png"
-          alt="Sea serpent masthead mark"
-          class="h-24 w-auto select-none"
-          sizes="96px"
-        />
+        {% headerImage "src/assets/images/sea-serpent-billboard.png", "Sea serpent masthead mark" %}
       {% elsif page.url contains '/blog/' %}
-        <img
-          src="/assets/images/gargoyle.png"
-          alt="Gargoyle masthead mark"
-          class="h-24 w-auto select-none"
-          sizes="96px"
-        />
+        {% headerImage "src/assets/images/gargoyle.png", "Gargoyle masthead mark" %}
       {% else %}
-        <img
-          src="/assets/images/sea-serpent.png"
-          alt="Sea serpent masthead mark"
-          class="h-24 w-auto select-none"
-          sizes="96px"
-        />
+        {% headerImage "src/assets/images/sea-serpent.png", "Sea serpent masthead mark" %}
       {% endif %}
     </div>
 

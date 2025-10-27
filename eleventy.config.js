@@ -39,6 +39,8 @@ export default function (eleventyConfig) {
     let html = await Image(src, {
       widths: [96, 192],
       formats: ["avif", "webp", "jpeg"],
+      outputDir: "./_site/assets/images/",
+      urlPath: "/assets/images/",
       returnType: "html",
       htmlOptions: {
         imgAttributes: {
@@ -46,6 +48,7 @@ export default function (eleventyConfig) {
           sizes: "96px",
           loading: "lazy",
           decoding: "async",
+          class: "h-24 w-auto select-none",
           "eleventy:ignore": "" // Prevent double-processing
         }
       }
