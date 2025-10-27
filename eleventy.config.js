@@ -135,6 +135,7 @@ export default function (eleventyConfig) {
       year: "numeric",
       month: "long",
       day: "numeric",
+      timeZone: "GMT",
     }).format(new Date(date));
   });
 
