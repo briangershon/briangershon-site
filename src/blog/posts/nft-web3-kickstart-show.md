@@ -1,8 +1,12 @@
 ---
+slug: nft-web3-kickstart-show
+primary_image: https://assets.stashfive.com/images/nft-web3-kickstart-show/full.jpeg
+summary_banner: https://assets.stashfive.com/images/nft-web3-kickstart-show/slice.jpeg
 tags: []
-title: NFT (on Twitch)
+title: "NFT (on Twitch)"
 date: 2022-07-13
-description: An overview of NFTs, a Q&A session, and helpful engineering resources for getting started with NFT development on Ethereum, Polygon and other EVM blockchains.
+summary_text: "An overview of NFTs, a Q&A session, and helpful engineering resources for getting started with NFT development on Ethereum, Polygon and other EVM blockchains."
+hashtags: []
 layout: layouts/post.liquid
 ---
 

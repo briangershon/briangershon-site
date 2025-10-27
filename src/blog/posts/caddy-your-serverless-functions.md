@@ -1,8 +1,12 @@
 ---
+slug: caddy-your-serverless-functions
+primary_image: https://assets.stashfive.com/images/caddy-your-serverless-functions/full.jpeg
+summary_banner: https://assets.stashfive.com/images/caddy-your-serverless-functions/slice.jpeg
 tags: []
 title: Caddy your Serverless Functions
 date: 2020-10-03
-description: Use Caddy to bring your serverless functions under one roof, with a custom domain and automatic HTTPS.
+summary_text: Use Caddy to bring your serverless functions under one roof, with a custom domain and automatic HTTPS.
+image_credit: '<a href="https://unsplash.com/@rdehamer">Ryan De Hamer</a>'
 layout: layouts/post.liquid
 ---
 

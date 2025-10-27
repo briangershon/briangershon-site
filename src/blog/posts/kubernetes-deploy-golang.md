@@ -1,8 +1,12 @@
 ---
+slug: kubernetes-deploy-golang
+primary_image: https://assets.stashfive.com/images/kubernetes-deploy-golang/full.jpeg
+summary_banner: https://assets.stashfive.com/images/kubernetes-deploy-golang/slice.jpeg
 tags: []
-title: Kubernetes Go module for Deploy Bots
+title: "Kubernetes Go module for Deploy Bots"
 date: 2018-10-05
-description: An open source Go module for deploying images to Kubernetes and checking their status.
+summary_text: An open source Go module for deploying images to Kubernetes and checking their status.
+image_credit: <a href="https://unsplash.com/@dos">Filipe Dos Santos Mendes</a>
 layout: layouts/post.liquid
 ---
 

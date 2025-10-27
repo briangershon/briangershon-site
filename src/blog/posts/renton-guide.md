@@ -1,8 +1,11 @@
 ---
+slug: renton-guide
+primary_image: https://assets.stashfive.com/images/renton-guide/full.jpeg
+summary_banner: https://assets.stashfive.com/images/renton-guide/slice.jpeg
 tags: []
-title: Event calendar for Renton and the Northwest
+title: "Event calendar for Renton and the Northwest"
 date: 2019-02-12
-description: The Renton Guide explores interesting activities in the Pacific Northwest, with a chewy Renton epicenter.
+summary_text: The Renton Guide explores interesting activities in the Pacific Northwest, with a chewy Renton epicenter.
 layout: layouts/post.liquid
 ---
 

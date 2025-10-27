@@ -1,8 +1,12 @@
 ---
+slug: javascript-minimal-starter-templates-vanillajs-react-node-eleventy
+primary_image: https://assets.stashfive.com/images/javascript-minimal-starter-templates-vanillajs-react-node-eleventy/full.jpeg
+summary_banner: https://assets.stashfive.com/images/javascript-minimal-starter-templates-vanillajs-react-node-eleventy/slice.jpeg
 tags: []
 title: JavaScript Starter Templates
 date: 2020-02-16
-description: Start new VanillaJS, React, Node.js, Glitch, Eleventy or Svelte projects with minimal dependencies.
+summary_text: "Start new VanillaJS, React, Node.js, Glitch, Eleventy or Svelte projects with minimal dependencies."
+image_credit: <a href="https://unsplash.com/@d_mccullough">Daniel McCullough</a>
 layout: layouts/post.liquid
 ---
 

@@ -1,8 +1,12 @@
 ---
+slug: developing-real-time-games-with-cloudflare-durable-objects-and-websockets
+primary_image: https://assets.stashfive.com/images/developing-real-time-games-with-cloudflare-durable-objects-and-websockets/full.jpeg
+summary_banner: https://assets.stashfive.com/images/developing-real-time-games-with-cloudflare-durable-objects-and-websockets/slice.jpeg
 tags: []
 title: Developing Real-time Games with Cloudflare Durable Objects and Websockets
 date: 2021-12-09
-description: What would a scalable game server look like on serverless? I kicked the Cloudflare tires and built an open source Planning Poker app to find out.
+summary_text: "What would a scalable game server look like on serverless? I kicked the Cloudflare tires and built an open source Planning Poker app to find out."
+image_credit: <a href="https://unsplash.com/@kirklai">𝓴𝓘𝓡𝓚 𝕝𝔸𝕀</a>
 layout: layouts/post.liquid
 ---
 

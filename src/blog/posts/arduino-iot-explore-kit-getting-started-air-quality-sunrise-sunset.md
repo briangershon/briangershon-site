@@ -1,7 +1,10 @@
 ---
-title: Regional Air Quality with Arduino Explore IoT Kit
+slug: arduino-iot-explore-kit-getting-started-air-quality-sunrise-sunset
+primary_image: https://assets.stashfive.com/images/arduino-iot-explore-kit-getting-started-air-quality-sunrise-sunset/full.jpeg
+summary_banner: https://assets.stashfive.com/images/arduino-iot-explore-kit-getting-started-air-quality-sunrise-sunset/slice.jpeg
+title: "Regional Air Quality with Arduino Explore IoT Kit"
 date: 2020-09-13
-description: Build an appliance that receives air quality and sunrise/sunset information from the cloud. The Arduino Explore IoT Kit includes a wifi-enabled Arduino with a carrier board full of sensors and actuators.
+summary_text: "Build an appliance that receives air quality and sunrise/sunset information from the cloud. The Arduino Explore IoT Kit includes a wifi-enabled Arduino with a carrier board full of sensors and actuators."
 layout: layouts/post.liquid
 ---
 

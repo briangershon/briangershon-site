@@ -1,8 +1,14 @@
 ---
-title: Building an MCP Server to Explore My Bluesky Feed
+slug: bluesky-daily-mcp-server
+title: "Building an MCP Server to Explore My Bluesky Feed"
+summary_text: "The Bluesky Daily MCP Server was created to summarize posts from Bluesky follows, enabling exploration of daily content through a chat interface rather than just viewing a single daily summary."
 date: 2025-04-09
+primary_image: https://assets.stashfive.com/images/bluesky-daily-mcp-server/visual-summary-of-bluesky-posts.png
+summary_banner: https://assets.stashfive.com/images/bluesky-daily-mcp-server/bluesky-daily-mcp-server-banner.jpg
 tags: []
-description: The Bluesky Daily MCP Server was created to summarize posts from Bluesky follows, enabling exploration of daily content through a chat interface rather than just viewing a single daily summary.
+image_credit:
+hashtags: []
+draft: false
 layout: layouts/post.liquid
 ---
 

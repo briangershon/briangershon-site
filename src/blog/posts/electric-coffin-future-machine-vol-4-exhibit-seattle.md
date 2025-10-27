@@ -1,10 +1,14 @@
 ---
+slug: electric-coffin-future-machine-vol-4-exhibit-seattle
 tags: []
 title: Future Machine Vol 4 Exhibit Opens in Seattle
 date: 2022-02-05
-description: Explore the intersection of art and industry at Electric Coffin's Future Machine exhibit.
+summary_text: Explore the intersection of art and industry at Electric Coffin's Future Machine exhibit.
+primary_image: https://assets.stashfive.com/images/electric-coffin-future-machine-vol-4-exhibit-seattle/full.jpeg
+summary_banner: https://assets.stashfive.com/images/electric-coffin-future-machine-vol-4-exhibit-seattle/slice.jpeg
 layout: layouts/post.liquid
 ---
+
 
 
 The Seattle artist **Electric Coffin** has created a new initiative called **Future Machine**. It's an "ongoing series of physical and digital installations and exhibitions in galleries, museums, and commercial buildings that explores the intersection of humanity, nature and technology."

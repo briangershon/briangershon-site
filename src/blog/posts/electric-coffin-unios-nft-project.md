@@ -1,8 +1,11 @@
 ---
+slug: electric-coffin-unios-nft-project
+primary_image: https://assets.stashfive.com/images/electric-coffin-future-machine-vol-4-exhibit-seattle/full.jpeg
+summary_banner: https://assets.stashfive.com/images/electric-coffin-future-machine-vol-4-exhibit-seattle/slice.jpeg
 tags: []
 title: The Unios Project by Electric Coffin
 date: 2022-02-07
-description: Explore the new Unios online community and their NFT project, which explores the intersection of art and technology. Minting is soon on Feb 16th.
+summary_text: "Explore the new Unios online community and their NFT project, which explores the intersection of art and technology. Minting is soon on Feb 16th."
 layout: layouts/post.liquid
 ---
 

@@ -1,8 +1,12 @@
 ---
+slug: unity-hackweek-2018-game-jam
+primary_image: https://assets.stashfive.com/images/unity-hackweek-2018-game-jam/full.jpeg
+summary_banner: https://assets.stashfive.com/images/unity-hackweek-2018-game-jam/slice.jpeg
 tags: []
-title: Unity Hackweek 2018 Game Jam
+title: "Unity Hackweek 2018 Game Jam"
 date: 2018-07-02
-description: Unity Hackweek 2018 creates an opportunity to play with Unity for Small Things and our new Entity Component System.
+summary_text: Unity Hackweek 2018 creates an opportunity to play with Unity for Small Things and our new Entity Component System.
+image_credit: <a href="https://www.linkedin.com/in/mantaspuida/">Mantas Puida</a>
 layout: layouts/post.liquid
 ---
 

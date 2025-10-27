@@ -122,14 +122,6 @@ class PostFetcher {
     // Handle empty strings
     if (joined === "") return "";
 
-    // Remove quotes if present
-    if (
-      (joined.startsWith('"') && joined.endsWith('"')) ||
-      (joined.startsWith("'") && joined.endsWith("'"))
-    ) {
-      return joined.slice(1, -1);
-    }
-
     return joined;
   }
 
@@ -151,33 +143,7 @@ class PostFetcher {
       } else if (value === "") {
         lines.push(`${key}:`);
       } else if (typeof value === "string") {
-        // Don't quote dates (YYYY-MM-DD format)
-        if (key === "date" && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
-          lines.push(`${key}: ${value}`);
-        } else if (
-          value.includes("\n") ||
-          value.includes("<")
-        ) {
-          // Use pipe literal for multi-line strings or strings with HTML/special characters
-          // This avoids escaping issues with HTML content in image_credit
-          lines.push(`${key}: |`);
-          value.split("\n").forEach((line) => {
-            lines.push(`  ${line}`);
-          });
-        } else if (value.includes('"')) {
-          // Use single quotes for strings with double quotes, escape single quotes
-          const escaped = value.replace(/'/g, "''");
-          lines.push(`${key}: '${escaped}'`);
-        } else if (value.includes(":") && !/^https?:\/\//.test(value)) {
-          // Use double quotes for strings with colons (but not URLs)
-          lines.push(`${key}: "${value}"`);
-        } else if (value.includes("#")) {
-          // Use single quotes for strings with hash symbols
-          lines.push(`${key}: '${value}'`);
-        } else {
-          // Simple strings without special chars (including URLs)
-          lines.push(`${key}: ${value}`);
-        }
+        lines.push(`${key}: ${value}`);
       } else {
         lines.push(`${key}: ${value}`);
       }

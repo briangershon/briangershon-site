@@ -1,8 +1,12 @@
 ---
+slug: exploring-smart-contracts
+primary_image: https://assets.stashfive.com/images/exploring-smart-contracts/full.jpeg
+summary_banner: https://assets.stashfive.com/images/exploring-smart-contracts/slice.jpeg
 tags: []
 title: Exploring Smart Contracts
 date: 2022-01-01
-description: Build a new generation of apps based on the blockchain and Smart Contracts. These tools can help you fund your projects, support your favorite creators, build games with real economies, and find new models for distributed ownership and governance.
+summary_text: "Build a new generation of apps based on the blockchain and Smart Contracts. These tools can help you fund your projects, support your favorite creators, build games with real economies, and find new models for distributed ownership and governance."
+image_credit: <a href="https://unsplash.com/@raimondklavins">Raimond Klavins</a>
 layout: layouts/post.liquid
 ---
 

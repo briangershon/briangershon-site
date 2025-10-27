@@ -1,8 +1,12 @@
 ---
+slug: cascadiajs-2020-the-importance-of-community
+primary_image: https://assets.stashfive.com/images/cascadiajs-2020-the-importance-of-community/full.jpeg
+summary_banner: https://assets.stashfive.com/images/cascadiajs-2020-the-importance-of-community/slice.jpeg
 tags: []
-title: The Importance of Community
+title: "The Importance of Community"
 date: 2020-07-14
-description: CascadiaJS has been part of my JavaScript journey since 2012. The upcoming 2020 conference in September is a bit different than years past. Beyond it being in cyberspace, there are pre-events!
+summary_text: "CascadiaJS has been part of my JavaScript journey since 2012. The upcoming 2020 conference in September is a bit different than years past. Beyond it being in cyberspace, there are pre-events!"
+image_credit: <a href="https://unsplash.com/@fakeapathy">Ian M Jones</a>
 layout: layouts/post.liquid
 ---
 

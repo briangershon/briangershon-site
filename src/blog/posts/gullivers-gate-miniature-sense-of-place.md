@@ -1,8 +1,11 @@
 ---
+slug: gullivers-gate-miniature-sense-of-place
+primary_image: https://assets.stashfive.com/images/gullivers-gate-miniature-sense-of-place/full.jpeg
+summary_banner: https://assets.stashfive.com/images/gullivers-gate-miniature-sense-of-place/slice.jpeg
 tags: []
-title: Miniature Sense of Place
+title: "Miniature Sense of Place"
 date: 2017-10-05
-description: If you've ever built a train set, decorated a doll house, created a fairy garden or sketched a map of your town, you'll want to visit Gulliver's Gate in New York City.
+summary_text: If you've ever built a train set, decorated a doll house, created a fairy garden or sketched a map of your town, you'll want to visit Gulliver's Gate in New York City.
 layout: layouts/post.liquid
 ---
 

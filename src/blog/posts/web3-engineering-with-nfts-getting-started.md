@@ -1,8 +1,13 @@
 ---
+slug: web3-engineering-with-nfts-getting-started
+primary_image: https://assets.stashfive.com/images/web3-engineering-with-nfts-getting-started/full.jpeg
+summary_banner: https://assets.stashfive.com/images/web3-engineering-with-nfts-getting-started/slice.jpeg
 tags: []
-title: Getting Started Building NFT Contracts
+title: "Getting Started Building NFT Contracts"
 date: 2022-07-14
-description: Develop, test and deploy an upgradeable NFT contract based on OpenZeppelin ERC721 Solidity framework and Hardhat tooling. Plus two real-world open-source NFT projects to learn from.
+summary_text: "Develop, test and deploy an upgradeable NFT contract based on OpenZeppelin ERC721 Solidity framework and Hardhat tooling. Plus two real-world open-source NFT projects to learn from."
+image_credit: <a href="https://unsplash.com/@distinctmind">@distinctmind</a>
+hashtags: ["polygon", "blockchain", "nft", "DeveloperDAO", "builder", "web3"]
 layout: layouts/post.liquid
 ---
 

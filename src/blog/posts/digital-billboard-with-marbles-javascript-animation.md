@@ -1,8 +1,11 @@
 ---
+slug: digital-billboard-with-marbles-javascript-animation
+primary_image: https://assets.stashfive.com/images/digital-billboard-with-marbles-javascript-animation/full.jpeg
+summary_banner: https://assets.stashfive.com/images/digital-billboard-with-marbles-javascript-animation/slice.jpeg
 tags: []
-title: Digital Marbles
+title: "Digital Marbles"
 date: 2018-11-04
-description: A digital billboard sign made from falling marbles.
+summary_text: A digital billboard sign made from falling marbles.
 layout: layouts/post.liquid
 ---
 

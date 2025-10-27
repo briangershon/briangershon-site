@@ -1,8 +1,14 @@
 ---
+slug: tales-of-tailwindcss
+primary_image: https://assets.stashfive.com/images/tales-of-tailwindcss/full.jpeg
+summary_banner: https://assets.stashfive.com/images/tales-of-tailwindcss/slice.jpeg
 tags: []
-title: Tales of Tailwind CSS
+title: "Tales of Tailwind CSS"
 date: 2022-11-09
-description: After some doubts, I gave Tailwind CSS a try and discovered a new love for styling my web applications. I'll discuss some reasons you'll like it, and also introduce component frameworks built on Tailwind.
+summary_text: "After some doubts, I gave Tailwind CSS a try and discovered a new love for styling my web applications. I'll discuss some reasons you'll like it, and also introduce component frameworks built on Tailwind."
+image_credit: <a href="https://unsplash.com/@temet">Cristobal Baeza</a>
+hashtags: []
+draft: false
 layout: layouts/post.liquid
 ---
 

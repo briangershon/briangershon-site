@@ -1,8 +1,11 @@
 ---
+slug: favorite-onewheel-rides-renton-tukwila-seattle
+primary_image: https://assets.stashfive.com/images/favorite-onewheel-rides-renton-tukwila-seattle/full.jpeg
+summary_banner: https://assets.stashfive.com/images/favorite-onewheel-rides-renton-tukwila-seattle/slice.jpeg
 tags: []
-title: Favorite Onewheel Rides in Renton, Tukwila, Seattle
+title: "Favorite Onewheel Rides in Renton, Tukwila, Seattle"
 date: 2021-06-26
-description: My favorite Onewheel rides in the Renton area, including some in Tukwila and Seattle.
+summary_text: "My favorite Onewheel rides in the Renton area, including some in Tukwila and Seattle."
 layout: layouts/post.liquid
 ---
 

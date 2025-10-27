@@ -1,8 +1,11 @@
 ---
+slug: museum-of-museums-in-seattle
+primary_image: https://assets.stashfive.com/images/museum-of-museums-in-seattle/full.jpeg
+summary_banner: https://assets.stashfive.com/images/museum-of-museums-in-seattle/slice.jpeg
 tags: []
-title: Seattle's Museum of Museums is a Delight
+title: "Seattle's Museum of Museums is a Delight"
 date: 2022-02-06
-description: Visit this contemporary art museum, currently featuring Electric Coffin's Future Machine exhibit, CAT TOWER!, and many others.
+summary_text: "Visit this contemporary art museum, currently featuring Electric Coffin's Future Machine exhibit, CAT TOWER!, and many others."
 layout: layouts/post.liquid
 ---
 

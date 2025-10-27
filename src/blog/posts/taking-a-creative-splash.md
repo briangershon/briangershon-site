@@ -1,8 +1,11 @@
 ---
+slug: taking-a-creative-splash
+primary_image: https://assets.stashfive.com/images/taking-a-creative-splash/full.jpeg
+summary_banner: https://assets.stashfive.com/images/taking-a-creative-splash/slice.jpeg
 tags: []
-title: Taking a Creative Splash
+title: "Taking a Creative Splash"
 date: 2018-10-21
-description: Unsplash is a license-free resource for exploring photography for fun and for your creative projects.
+summary_text: Unsplash is a license-free resource for exploring photography for fun and for your creative projects.
 layout: layouts/post.liquid
 ---
 

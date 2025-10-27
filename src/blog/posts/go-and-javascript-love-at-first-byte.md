@@ -1,8 +1,11 @@
 ---
+slug: go-and-javascript-love-at-first-byte
+primary_image: https://assets.stashfive.com/images/go-and-javascript-love-at-first-byte/full.jpeg
+summary_banner: https://assets.stashfive.com/images/go-and-javascript-love-at-first-byte/slice.jpeg
 tags: []
-title: 'Go and JavaScript: Love at First Byte'
+title: "Go and JavaScript: Love at First Byte"
 date: 2017-07-16
-description: What has attracted me to JavaScript and now Go are the vibrant communities and the wide variety of software they enable one to create.
+summary_text: What has attracted me to JavaScript and now Go are the vibrant communities and the wide variety of software they enable one to create.
 layout: layouts/post.liquid
 ---
 

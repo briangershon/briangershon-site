@@ -1,8 +1,12 @@
 ---
+slug: choose-your-own-adventure-with-eleventy
+primary_image: https://assets.stashfive.com/images/choose-your-own-adventure-with-eleventy/full.jpeg
+summary_banner: https://assets.stashfive.com/images/choose-your-own-adventure-with-eleventy/slice.jpeg
 tags: []
 title: Choose Your Own Adventure with Eleventy
 date: 2020-01-28
-description: Here's my presentation from the January 2020 BellevueJS meetup.
+summary_text: "Here's my presentation from the January 2020 BellevueJS meetup."
+image_credit: <a href="https://cmdrshaneavery.com/">CMDR Shane</a>, originally from https://unsplash.com/@cmdrshane
 layout: layouts/post.liquid
 ---
 

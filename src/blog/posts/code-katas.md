@@ -1,8 +1,12 @@
 ---
+slug: code-katas
+primary_image: https://assets.stashfive.com/images/code-katas/full.jpeg
+summary_banner: https://assets.stashfive.com/images/code-katas/slice.jpeg
 tags: []
 title: Code Katas
 date: 2020-03-20
-description: Stay sharp learning new languages and algorithms. Give Codewars and the Code Katas Meetup a try!
+summary_text: "Stay sharp learning new languages and algorithms. Give Codewars and the Code Katas Meetup a try!"
+image_credit: <a href="https://unsplash.com/@danny_lincoln">Danny Lincoln</a>
 layout: layouts/post.liquid
 ---
 
