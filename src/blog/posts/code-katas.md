@@ -3,13 +3,12 @@ slug: code-katas
 primary_image: https://assets.stashfive.com/images/code-katas/full.jpeg
 summary_banner: https://assets.stashfive.com/images/code-katas/slice.jpeg
 tags: []
-title: Code Katas
+title: Code Katas - Sharpen Your Programming Skills
 date: 2020-03-20
-summary_text: "Stay sharp learning new languages and algorithms. Give Codewars and the Code Katas Meetup a try!"
+summary_text: "Stay sharp learning new languages and algorithms with Codewars code katas and the monthly SeattleJS Hackers Code Katas Meetup."
 image_credit: <a href="https://unsplash.com/@danny_lincoln">Danny Lincoln</a>
 layout: layouts/post.liquid
 ---
-
 
 There are many ways to grow your software engineering skills. Learning algorithms, building tools, creating websites, crafting games.
 

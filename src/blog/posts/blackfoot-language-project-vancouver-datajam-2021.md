@@ -3,13 +3,12 @@ slug: blackfoot-language-project-vancouver-datajam-2021
 primary_image: https://assets.stashfive.com/images/blackfoot-language-project-vancouver-datajam-2021/full.jpeg
 summary_banner: https://assets.stashfive.com/images/blackfoot-language-project-vancouver-datajam-2021/slice.jpeg
 tags: []
-title: "Blackfoot Language Project @ Vancouver DataJam"
+title: "Blackfoot Language Learning at DataJam 2021"
 date: 2021-10-02
-summary_text: "Here is a walk-through of our application for exploring the Blackfoot language. Created at Vancouver DataJam 2021."
-image_credit: <a href="https://www.linkedin.com/in/shinyouhou/">Shin-you Hou</a>
+summary_text: "Walk-through of our interactive application for exploring the Blackfoot language with audio pronunciation features, created at Vancouver DataJam 2021."
+image_credit: '<a href="https://www.linkedin.com/in/shinyouhou/">Shin-you Hou</a>'
 layout: layouts/post.liquid
 ---
-
 
 ## Our Project
 

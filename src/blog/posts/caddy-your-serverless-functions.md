@@ -5,11 +5,10 @@ summary_banner: https://assets.stashfive.com/images/caddy-your-serverless-functi
 tags: []
 title: Caddy your Serverless Functions
 date: 2020-10-03
-summary_text: Use Caddy to bring your serverless functions under one roof, with a custom domain and automatic HTTPS.
+summary_text: "Host your own API gateway with Caddy v2 to unify cloud functions under a custom domain with automatic HTTPS, reverse proxying, and streamlined configuration."
 image_credit: '<a href="https://unsplash.com/@rdehamer">Ryan De Hamer</a>'
 layout: layouts/post.liquid
 ---
-
 
 Use Caddy to bring your serverless functions under one "custom domain" roof, with automatic HTTPS.
 

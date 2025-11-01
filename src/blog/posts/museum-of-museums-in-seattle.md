@@ -9,7 +9,6 @@ summary_text: "Visit this contemporary art museum, currently featuring Electric 
 layout: layouts/post.liquid
 ---
 
-
 The [Museum of Museums](https://www.museumofmuseums.com/) is a fantastic contemporary art center in Seattle.
 
 This was my first visit and am excited to return.

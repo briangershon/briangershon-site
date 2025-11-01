@@ -3,13 +3,12 @@ slug: developing-real-time-games-with-cloudflare-durable-objects-and-websockets
 primary_image: https://assets.stashfive.com/images/developing-real-time-games-with-cloudflare-durable-objects-and-websockets/full.jpeg
 summary_banner: https://assets.stashfive.com/images/developing-real-time-games-with-cloudflare-durable-objects-and-websockets/slice.jpeg
 tags: []
-title: Developing Real-time Games with Cloudflare Durable Objects and Websockets
+title: Real-time Games with Cloudflare Durable Objects
 date: 2021-12-09
 summary_text: "What would a scalable game server look like on serverless? I kicked the Cloudflare tires and built an open source Planning Poker app to find out."
 image_credit: <a href="https://unsplash.com/@kirklai">𝓴𝓘𝓡𝓚 𝕝𝔸𝕀</a>
 layout: layouts/post.liquid
 ---
-
 
 What would a scalable [serverless](https://www.cloudflare.com/learning/serverless/what-is-serverless/)-style game server look like?
 
@@ -57,7 +56,6 @@ Some more details:
 ## Some Durable Object learnings along the way:
 
 - My initial thought was to treat the Durable Object as purely a singleton data container and do more logic in the Worker, but discovered that it's best to keep most of the logic in the Durable Object and then just pass the unaltered request directly from the Worker.
-
   - This was particularly important for adding websocket support -- just terminate the websocket connection inside the Durable Object.
 
   - If you try to do logic in both Worker and Durable Object, you have to marshal data back and forth and create extra code/boilerplate.

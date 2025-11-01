@@ -5,11 +5,10 @@ summary_banner: https://assets.stashfive.com/images/exploring-smart-contracts/sl
 tags: []
 title: Exploring Smart Contracts
 date: 2022-01-01
-summary_text: "Build a new generation of apps based on the blockchain and Smart Contracts. These tools can help you fund your projects, support your favorite creators, build games with real economies, and find new models for distributed ownership and governance."
+summary_text: "Learn blockchain development with Smart Contracts using Solidity, OpenZeppelin, and Hardhat. Includes courses, podcasts, and best practices for building dApps."
 image_credit: <a href="https://unsplash.com/@raimondklavins">Raimond Klavins</a>
 layout: layouts/post.liquid
 ---
-
 
 Smart Contracts allow you to build apps that support new ways of funding projects, building economies, governing organizations, gaming, creating unique digital experiences with your favorite creators, or building those experiences for your own creations.
 

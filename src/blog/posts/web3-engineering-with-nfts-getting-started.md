@@ -5,12 +5,11 @@ summary_banner: https://assets.stashfive.com/images/web3-engineering-with-nfts-g
 tags: []
 title: "Getting Started Building NFT Contracts"
 date: 2022-07-14
-summary_text: "Develop, test and deploy an upgradeable NFT contract based on OpenZeppelin ERC721 Solidity framework and Hardhat tooling. Plus two real-world open-source NFT projects to learn from."
+summary_text: "Develop, test and deploy upgradeable NFT contracts using OpenZeppelin ERC721, Hardhat tooling, and learn from real-world NFT projects on Polygon."
 image_credit: <a href="https://unsplash.com/@distinctmind">@distinctmind</a>
 hashtags: ["polygon", "blockchain", "nft", "DeveloperDAO", "builder", "web3"]
 layout: layouts/post.liquid
 ---
-
 
 NFTs are a big topic and there are many ways to learn about them.
 
@@ -48,7 +47,6 @@ Having an NFT on the blockchain provides public proof of ownership, which can th
 ### What are some interesting uses for NFTs?
 
 - Fun and Utility
-
   - Collect free POAPs (pronounced "poe app" as mentioned in [POAP guide](https://ryps.co/poap/)) which are free digital badges you collect for activities you've attended. POAPs means "Proof of Attendance Protocol". [Read more here](https://poap.xyz). You can also mint your own to give out for your next conference or event, and could offer special experiences for those holding a POAP for your event.
   - Gaming -- earn NFTs, or buy assets you own that you can use/trade/sell/buy. An insightful read: [Make NFTs a Gaming Tool Instead of a Sales Hustle](https://thedefiant.io/nfts-games-tools/)
   - Funding your next creative project

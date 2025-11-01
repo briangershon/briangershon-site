@@ -3,12 +3,11 @@ slug: favorite-onewheel-rides-renton-tukwila-seattle
 primary_image: https://assets.stashfive.com/images/favorite-onewheel-rides-renton-tukwila-seattle/full.jpeg
 summary_banner: https://assets.stashfive.com/images/favorite-onewheel-rides-renton-tukwila-seattle/slice.jpeg
 tags: []
-title: "Favorite Onewheel Rides in Renton, Tukwila, Seattle"
+title: "Best Onewheel Rides in Seattle Area"
 date: 2021-06-26
-summary_text: "My favorite Onewheel rides in the Renton area, including some in Tukwila and Seattle."
+summary_text: "Favorite Onewheel riding spots around Renton, Tukwila, and Seattle with detailed route maps, difficulty levels, and trail recommendations."
 layout: layouts/post.liquid
 ---
-
 
 ## What is a Onewheel?
 

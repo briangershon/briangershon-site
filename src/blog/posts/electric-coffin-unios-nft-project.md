@@ -9,7 +9,6 @@ summary_text: "Explore the new Unios online community and their NFT project, whi
 layout: layouts/post.liquid
 ---
 
-
 <em>My cover photo is from Electric Coffin's current [Future Machine Vol 4](/blog/electric-coffin-future-machine-vol-4-exhibit-seattle/) exhibit, which I really enjoyed and recommend you visit.</em>
 
 ## What is Unios, and how can you participate and learn more?

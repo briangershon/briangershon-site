@@ -5,13 +5,12 @@ summary_banner: https://assets.stashfive.com/images/tales-of-tailwindcss/slice.j
 tags: []
 title: "Tales of Tailwind CSS"
 date: 2022-11-09
-summary_text: "After some doubts, I gave Tailwind CSS a try and discovered a new love for styling my web applications. I'll discuss some reasons you'll like it, and also introduce component frameworks built on Tailwind."
+summary_text: "Why I changed my mind about Tailwind CSS and now love it for styling web apps. Plus introduction to component frameworks like DaisyUI and Tailwind UI."
 image_credit: <a href="https://unsplash.com/@temet">Cristobal Baeza</a>
 hashtags: []
 draft: false
 layout: layouts/post.liquid
 ---
-
 
 ## Overview
 
@@ -43,12 +42,10 @@ If you like the flexibility of directly wielding CSS (but with nice utility clas
 ## What finally sold it for me
 
 - HTML and styles go hand-in-hand, you don't have one without the other.
-
   - Easier to maintain one structure rather than maintaing two structures and connect them with semantic names.
   - It's true the CSS-in-JS approach also co-mingles HTML and styles, though with Tailwind there's no gymnastics of passing groups of styles in via a JavaScript object.
 
 - Utilities make life easier
-
   - shortcuts for common patterns like flexbox and grids, media queries, pseudo classes like hover.
   - these utilties map to CSS and you can peruse via the VSCode extension.
 
@@ -86,7 +83,6 @@ And you customize all these Tailwind-based frameworks the same way so can mix an
 ## Tips and Resources
 
 - For components that are heavily styled, if you're unhappy with long strings of Tailwind utilities:
-
   - create components to encapsulate. For example, move a heavily styled button into its own component to reuse.
   - another option is creating your own Tailwind utilities, though read [Avoid Premature Abstraction](https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction) first.
 
