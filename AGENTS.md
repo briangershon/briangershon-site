@@ -34,7 +34,6 @@
 13. Blog posts may include these optional frontmatter fields:
     - `tags`: Array of tags (often empty `[]`)
     - `image_credit`: HTML anchor tag with photographer attribution (e.g., `<a href="https://unsplash.com/@username">@username</a>`)
-    - `hashtags`: Array of strings without # symbol (e.g., `["polygon", "blockchain"]`)
     - `draft`: Boolean, set to `false` to indicate non-draft status
 
 14. Frontmatter field order convention:
@@ -46,9 +45,8 @@
     6. primary_image
     7. image_credit (if included)
     8. tags (if included)
-    9. hashtags (if included)
-    10. draft (if included)
-    11. layout
+    9. draft (if included)
+    10. layout
 
 ## Blog Content Writing Guidelines
 

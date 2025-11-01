@@ -7,7 +7,6 @@ title: "Getting Started Building NFT Contracts"
 date: 2022-07-14
 summary_text: "Develop, test and deploy upgradeable NFT contracts using OpenZeppelin ERC721, Hardhat tooling, and learn from real-world NFT projects on Polygon."
 image_credit: <a href="https://unsplash.com/@distinctmind">@distinctmind</a>
-hashtags: ["polygon", "blockchain", "nft", "DeveloperDAO", "builder", "web3"]
 layout: layouts/post.liquid
 ---
 

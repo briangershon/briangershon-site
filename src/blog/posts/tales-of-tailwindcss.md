@@ -7,7 +7,6 @@ title: "Tales of Tailwind CSS"
 date: 2022-11-09
 summary_text: "Why I changed my mind about Tailwind CSS and now love it for styling web apps. Plus introduction to component frameworks like DaisyUI and Tailwind UI."
 image_credit: <a href="https://unsplash.com/@temet">Cristobal Baeza</a>
-hashtags: []
 draft: false
 layout: layouts/post.liquid
 ---
