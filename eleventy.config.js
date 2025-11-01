@@ -113,11 +113,12 @@ export default function (eleventyConfig) {
   // (they're API-generated and we need Eleventy to process them)
   eleventyConfig.setUseGitIgnore(false);
 
-  // Skip building draft posts by using computed permalink
+  // Skip building draft posts in production by using computed permalink
   eleventyConfig.addGlobalData("eleventyComputed", {
     permalink: (data) => {
-      // Skip building draft posts by returning false for permalink
-      if (data.draft === true) {
+      // Skip building draft posts only in production (not in development)
+      const isDevelopment = process.env.NODE_ENV === 'development';
+      if (data.draft === true && !isDevelopment) {
         return false;
       }
       return data.permalink;
@@ -126,9 +127,10 @@ export default function (eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection("posts", (collectionApi) => {
+    const isDevelopment = process.env.NODE_ENV === 'development';
     return collectionApi
       .getFilteredByGlob("src/blog/posts/*.md")
-      .filter((post) => !post.data.draft) // Filter out draft posts
+      .filter((post) => isDevelopment || !post.data.draft) // Include drafts in development, exclude in production
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   });
 

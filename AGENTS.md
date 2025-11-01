@@ -30,11 +30,11 @@
     - `primary_image`: Full-size hero image URL
     - `summary_banner`: Banner/slice image URL
     - `layout`: Always set to `layouts/post.liquid`
+    - `draft`: Boolean, set to `true` for new posts (remove or set to `false` when ready to publish)
 
 13. Blog posts may include these optional frontmatter fields:
     - `tags`: Array of tags (often empty `[]`)
     - `image_credit`: HTML anchor tag with photographer attribution (e.g., `<a href="https://unsplash.com/@username">@username</a>`)
-    - `draft`: Boolean, set to `false` to indicate non-draft status
 
 14. Frontmatter field order convention:
     1. slug
@@ -45,7 +45,7 @@
     6. primary_image
     7. image_credit (if included)
     8. tags (if included)
-    9. draft (if included)
+    9. draft
     10. layout
 
 ## Blog Content Writing Guidelines

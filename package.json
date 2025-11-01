@@ -6,7 +6,7 @@
   "scripts": {
     "build:css": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --watch",
     "build:eleventy": "npx eleventy --config=eleventy.config.js",
-    "dev": "concurrently \"npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --watch\" \"npx eleventy --serve --config=eleventy.config.js\"",
+    "dev": "NODE_ENV=development concurrently \"npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --watch\" \"npx eleventy --serve --config=eleventy.config.js\"",
     "build": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css && npm run build:eleventy && npm run seo:lint",
     "build:production": "npx tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css && npm run build:eleventy",
     "format": "prettier --write src/**/*.{js,liquid,md}",

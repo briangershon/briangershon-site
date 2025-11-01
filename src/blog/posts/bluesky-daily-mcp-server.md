@@ -7,7 +7,6 @@ primary_image: https://assets.stashfive.com/images/bluesky-daily-mcp-server/visu
 summary_banner: https://assets.stashfive.com/images/bluesky-daily-mcp-server/bluesky-daily-mcp-server-banner.jpg
 tags: []
 image_credit:
-draft: false
 layout: layouts/post.liquid
 ---
 
