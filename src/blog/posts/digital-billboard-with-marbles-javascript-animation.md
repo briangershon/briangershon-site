@@ -5,10 +5,9 @@ summary_banner: https://assets.stashfive.com/images/digital-billboard-with-marbl
 tags: []
 title: "Digital Marbles"
 date: 2018-11-04
-summary_text: A digital billboard sign made from falling marbles.
+summary_text: "Create custom billboard messages with animated bouncing marbles using vanilla JavaScript, ES6 modules, and a custom physics engine built with Parcel and Babel."
 layout: layouts/post.liquid
 ---
-
 
 It's great fun to build a site from scratch.
 

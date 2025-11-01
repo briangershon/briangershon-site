@@ -5,11 +5,10 @@ summary_banner: https://assets.stashfive.com/images/choose-your-own-adventure-wi
 tags: []
 title: Choose Your Own Adventure with Eleventy
 date: 2020-01-28
-summary_text: "Here's my presentation from the January 2020 BellevueJS meetup."
+summary_text: "BellevueJS meetup presentation covering Eleventy static site generation, from basic setup to generating 10,000 pages with minimal JavaScript dependencies."
 image_credit: <a href="https://cmdrshaneavery.com/">CMDR Shane</a>, originally from https://unsplash.com/@cmdrshane
 layout: layouts/post.liquid
 ---
-
 
 Thank you for joining me for my Eleventy presentation at the [BellevueJS Meetup on January 28th 2020](https://www.meetup.com/BellevueJS/events/llvkklybccblc/).
 

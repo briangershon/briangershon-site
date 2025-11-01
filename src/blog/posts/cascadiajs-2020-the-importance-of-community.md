@@ -5,11 +5,10 @@ summary_banner: https://assets.stashfive.com/images/cascadiajs-2020-the-importan
 tags: []
 title: "The Importance of Community"
 date: 2020-07-14
-summary_text: "CascadiaJS has been part of my JavaScript journey since 2012. The upcoming 2020 conference in September is a bit different than years past. Beyond it being in cyberspace, there are pre-events!"
+summary_text: "My journey with CascadiaJS since 2012, volunteering as Scholarship Lead, and the virtual conference experience with pre-events and opportunities."
 image_credit: <a href="https://unsplash.com/@fakeapathy">Ian M Jones</a>
 layout: layouts/post.liquid
 ---
-
 
 I discovered the very first CascadiaJS event in [2012](https://2012.cascadiajs.com/) and have made this my annual pilgrimage since.
 

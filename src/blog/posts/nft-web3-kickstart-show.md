@@ -10,7 +10,6 @@ hashtags: []
 layout: layouts/post.liquid
 ---
 
-
 **The video of my interview on the "Web3 Kickoff Show about NFTs" is viewable [here](https://www.twitch.tv/videos/1530729434?t=0h5m25s).**
 
 Here's a [companion blog post](../web3-engineering-with-nfts-getting-started/) I wrote with resources for getting started with NFT development on Ethereum, Polygon and other EVM blockchains.

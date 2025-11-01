@@ -5,11 +5,10 @@ summary_banner: https://assets.stashfive.com/images/unity-hackweek-2018-game-jam
 tags: []
 title: "Unity Hackweek 2018 Game Jam"
 date: 2018-07-02
-summary_text: Unity Hackweek 2018 creates an opportunity to play with Unity for Small Things and our new Entity Component System.
+summary_text: "Our team built a tile-matching puzzle game using Unity Instant Games and DOTS during Unity Hackweek 2018, collaborating with developers from Zynga and Kiloo."
 image_credit: <a href="https://www.linkedin.com/in/mantaspuida/">Mantas Puida</a>
 layout: layouts/post.liquid
 ---
-
 
 In June I participated in our annual Unity Hackweek event, where people from around the company work across a diversity of teams (such as graphics, cloud services, machine learning) to learn and play with new ideas, get to know each other, and pull together some interesting projects. [Unity Hackweek 2018: Creating X Together](https://blogs.unity3d.com/2018/07/04/unity-hackweek-2018-creating-x-together/).
 

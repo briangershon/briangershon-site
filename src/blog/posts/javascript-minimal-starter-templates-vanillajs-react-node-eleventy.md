@@ -5,11 +5,10 @@ summary_banner: https://assets.stashfive.com/images/javascript-minimal-starter-t
 tags: []
 title: JavaScript Starter Templates
 date: 2020-02-16
-summary_text: "Start new VanillaJS, React, Node.js, Glitch, Eleventy or Svelte projects with minimal dependencies."
+summary_text: "GitHub template repositories for VanillaJS, React, Node.js, Glitch, Eleventy and Svelte with ES modules, hot reloading, testing, and CI workflows."
 image_credit: <a href="https://unsplash.com/@d_mccullough">Daniel McCullough</a>
 layout: layouts/post.liquid
 ---
-
 
 Each time I start a project I want a minimal template to get going. "Minimal" meaning least complicated and smallest number of dependencies while still having features every JavaScript project needs.
 

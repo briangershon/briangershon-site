@@ -5,10 +5,9 @@ summary_banner: https://assets.stashfive.com/images/gullivers-gate-miniature-sen
 tags: []
 title: "Miniature Sense of Place"
 date: 2017-10-05
-summary_text: If you've ever built a train set, decorated a doll house, created a fairy garden or sketched a map of your town, you'll want to visit Gulliver's Gate in New York City.
+summary_text: "Explore Gulliver's Gate in Times Square NYC - a stunning HO scale exhibit with intricate miniature cities, moving vehicles, trains and interactive displays."
 layout: layouts/post.liquid
 ---
-
 
 If you've ever built a train set, decorated a doll house, created a fairy garden or sketched a map of your town, you know the fun of learning about a place -- as well as the challenge of constructing one.
 

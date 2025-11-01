@@ -5,11 +5,10 @@ summary_banner: https://assets.stashfive.com/images/kubernetes-deploy-golang/sli
 tags: []
 title: "Kubernetes Go module for Deploy Bots"
 date: 2018-10-05
-summary_text: An open source Go module for deploying images to Kubernetes and checking their status.
+summary_text: "Open source Go module for deploying Docker images to Kubernetes using the API. Includes deployment updates, status checks, and command-line demo app."
 image_credit: <a href="https://unsplash.com/@dos">Filipe Dos Santos Mendes</a>
 layout: layouts/post.liquid
 ---
-
 
 While the Slack-based deploy bot I built is customized specifically for our own use, the Kubernetes API bits are useful for anyone who wants to create their own automation.
 

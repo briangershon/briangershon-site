@@ -5,10 +5,9 @@ summary_banner: https://assets.stashfive.com/images/renton-guide/slice.jpeg
 tags: []
 title: "Event calendar for Renton and the Northwest"
 date: 2019-02-12
-summary_text: The Renton Guide explores interesting activities in the Pacific Northwest, with a chewy Renton epicenter.
+summary_text: "Event calendar for Renton WA and Pacific Northwest including comic cons, maker faires, car shows and multicultural festivals built with Gatsby and Netlify."
 layout: layouts/post.liquid
 ---
-
 
 Visit [rentonguide.com](https://www.rentonguide.com/) for a list of events in the Renton WA area as well as interesting events throughout the Northwest.
 

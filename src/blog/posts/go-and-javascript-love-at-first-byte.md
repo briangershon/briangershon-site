@@ -9,7 +9,6 @@ summary_text: What has attracted me to JavaScript and now Go are the vibrant com
 layout: layouts/post.liquid
 ---
 
-
 What has attracted me to JavaScript and now Go are the vibrant communities and the wide variety of software they enable one to create.
 
 Today I head back to Seattle after a great [GopherCon](https://www.gophercon.com/). I rank it up there with [CascadiaJS](https://2016.cascadiajs.com/) and JSConf which I had religiously attended in the past.

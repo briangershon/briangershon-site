@@ -5,10 +5,9 @@ summary_banner: https://assets.stashfive.com/images/taking-a-creative-splash/sli
 tags: []
 title: "Taking a Creative Splash"
 date: 2018-10-21
-summary_text: Unsplash is a license-free resource for exploring photography for fun and for your creative projects.
+summary_text: "Discover Unsplash for high-quality, license-free photography perfect for blogs and web projects. My experience as contributor and user of the platform."
 layout: layouts/post.liquid
 ---
-
 
 I was reminded of Unsplash in a recent Changelog podcast (<https://changelog.com/founderstalk/54>) and wanted to give it a try -- both as a contributor and as a source of creative media for my web projects.
 

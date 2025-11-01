@@ -2,12 +2,11 @@
 slug: arduino-iot-explore-kit-getting-started-air-quality-sunrise-sunset
 primary_image: https://assets.stashfive.com/images/arduino-iot-explore-kit-getting-started-air-quality-sunrise-sunset/full.jpeg
 summary_banner: https://assets.stashfive.com/images/arduino-iot-explore-kit-getting-started-air-quality-sunrise-sunset/slice.jpeg
-title: "Regional Air Quality with Arduino Explore IoT Kit"
+title: "Arduino IoT Kit Air Quality Monitor Project"
 date: 2020-09-13
-summary_text: "Build an appliance that receives air quality and sunrise/sunset information from the cloud. The Arduino Explore IoT Kit includes a wifi-enabled Arduino with a carrier board full of sensors and actuators."
+summary_text: "Build a cloud-connected air quality monitor with the Arduino Explore IoT Kit, featuring real-time AirNow API integration and sunrise/sunset tracking."
 layout: layouts/post.liquid
 ---
-
 
 Heroku sponsored an [IoT workshop](https://2020.cascadiajs.com/workshop-iot) at our recent CascadiaJS conference. Participants were sent a free Arduino Explore IoT kit to play with prior to the kit being available publicly.
 
