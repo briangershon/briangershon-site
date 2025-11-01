@@ -12,7 +12,6 @@ eleventyExcludeFromCollections: true
     <pubDate>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822Gmt }}</pubDate>
     <lastBuildDate>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822Gmt }}</lastBuildDate>
     {% for post in collections.posts | reverse %}
-    {% unless post.data.draft %}
     <item>
       <title>{{ post.data.title | escape }}</title>
       <description>{{ post.data.summary_text | escape }}</description>
@@ -25,7 +24,6 @@ eleventyExcludeFromCollections: true
       {% endfor %}
       {% endif %}
     </item>
-    {% endunless %}
     {% endfor %}
   </channel>
 </rss>
